@@ -211,6 +211,7 @@ void MainWindow::on_clearAll_clicked()
         history.dictionaryNo.clear();
         history.saveToFile();
         v2ListView(history.words, ui->historyList);
+        ui->definition_3->setText("");
 }
 
 
