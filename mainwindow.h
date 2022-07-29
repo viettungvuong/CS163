@@ -63,6 +63,8 @@ private slots:
 
     void on_resetDictionary_clicked();
 
+    void on_pushButton_8_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
