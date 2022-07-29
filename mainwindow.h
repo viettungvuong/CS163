@@ -65,6 +65,8 @@ private slots:
 
     void on_pushButton_8_clicked();
 
+    void on_suggestingWords2_currentRowChanged(int currentRow);
+
 private:
     Ui::MainWindow *ui;
 };

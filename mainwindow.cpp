@@ -310,7 +310,15 @@ void MainWindow::on_resetDictionary_clicked()
 
 void MainWindow::on_pushButton_8_clicked()
 {
-    v = (ProgramData::currentTree).search4Definition(convertTo(ui->searchBar->toPlainText()));
-    v2ListView(v, ui->suggestingWords);
+    v = (ProgramData::currentTree).search4Definition(convertTo(ui->searchBar_2->toPlainText()));
+    v2ListView(v, ui->suggestingWords2);
+}
+
+
+void MainWindow::on_suggestingWords2_currentRowChanged(int currentRow)
+{
+    if (v.size() > 0) {
+          ui->definition2->setText(convertFrom(v[currentRow].definition)); //xuat definition khi dc chon
+    }
 }
 
