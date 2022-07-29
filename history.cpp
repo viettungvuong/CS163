@@ -27,6 +27,7 @@ void History::loadFromFile() {
     QTextStream ifs(&f);
     int n;
     ifs>>n;
+    qDebug()<<n;
     for (int i=0; i<n; i++){
             std::string temp;
             temp=convertTo(ifs.readLine());
@@ -70,6 +71,7 @@ void Favorite::loadFromFile() {
      QTextStream ifs(&f);
      int n;
      ifs>>n;
+     qDebug()<<n;
      for (int i=0; i<n; i++){
             std::string temp;
             temp=convertTo(ifs.readLine());
