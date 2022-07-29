@@ -13,7 +13,6 @@ void History::saveToFile() {
     if (!f.open(QIODevice::WriteOnly))
         return;
     QTextStream ofs(&f);
-    ofs<<words.size()<<"\n";
     for (int i = 0; i < words.size(); i++) {
          ofs << convertFrom(words[i].word) << "\n" << dictionaryNo[i] << "\n";
     }
@@ -25,21 +24,22 @@ void History::loadFromFile() {
     if (!f.open(QIODevice::ReadOnly))
         return;
     QTextStream ifs(&f);
-    int n;
-    ifs>>n;
-    qDebug()<<n;
-    for (int i=0; i<n; i++){
-            std::string temp;
-            temp=convertTo(ifs.readLine());
-            qDebug()<<convertFrom(temp);
+    int i=0;
+    while (!ifs.atEnd()){
+        std::string line=convertTo(ifs.readLine());
+        if (i%2==0){
             WordAndDef wad;
-            wad.word = temp;
+            wad.word = line;
             words.push_back(wad);
+        }
+        else{
             int a;
-            ifs>>a;
-            qDebug()<<a;
+            std::stringstream ss;
+            ss<<line; ss>>a;
             dictionaryNo.push_back(a);
-    }
+        }
+        i++;
+   }
     f.close();
     initDefinition();
 
@@ -57,7 +57,6 @@ void Favorite::initDefinition() {
 void Favorite::saveToFile() {
     QFile f((qApp->applicationDirPath()+"/favorite.txt"));
     QTextStream ofs(&f);
-    ofs<<words.size()<<"\n";
     for (int i = 0; i < words.size(); i++) {
             ofs << convertFrom(words[i].word) << "\n" << dictionaryNo[i] << "\n";
      }
@@ -70,17 +69,22 @@ void Favorite::loadFromFile() {
         return;
      QTextStream ifs(&f);
      int n;
-     ifs>>n;
-     qDebug()<<n;
-     for (int i=0; i<n; i++){
-            std::string temp;
-            temp=convertTo(ifs.readLine());
-            WordAndDef wad;
-            wad.word = temp;
-            words.push_back(wad);
-            int a;
-            ifs>>a;
-            dictionaryNo.push_back(a);
+     //ifs>>n;
+     int i=0;
+     while (!ifs.atEnd()){
+         std::string line=convertTo(ifs.readLine());
+         if (i%2==0){
+             WordAndDef wad;
+             wad.word = line;
+             words.push_back(wad);
+         }
+         else{
+             int a;
+             std::stringstream ss;
+             ss<<line; ss>>a;
+             dictionaryNo.push_back(a);
+         }
+         i++;
     }
     f.close();
     initDefinition();
