@@ -21,6 +21,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->radioButton_6->setEnabled(false);
     ui->radioButton_7->setEnabled(false);
     ui->radioButton_8->setEnabled(false);
+
+    ui->favoriteList->setCurrentRow(0);
+    ui->historyList->setCurrentRow(0);
 }
 
 MainWindow::~MainWindow()
@@ -191,16 +194,14 @@ void MainWindow::on_suggestingWords_currentRowChanged(int currentRow)
 
 void MainWindow::on_favoriteList_currentRowChanged(int currentRow)
 {
-    if (favorite.words.size() > 0) {
-            ui->definition_2->setText(convertFrom(favorite.words[currentRow].definition)); //xuat definition khi dc chon
-        }
-        if (currentRow != -1) {
-            ui->removeFavorite->setEnabled(true);
-        }
-        else
-        {
-            ui->removeFavorite->setEnabled(false);
-        }
+    if (currentRow != -1) {
+        ui->removeFavorite->setEnabled(true);
+        ui->definition_2->setText(convertFrom(favorite.words[currentRow].definition));
+    }
+    else
+    {
+        ui->removeFavorite->setEnabled(false);
+    }
 }
 
 
