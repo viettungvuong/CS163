@@ -13,6 +13,7 @@ void History::saveToFile() {
     if (!f.open(QIODevice::WriteOnly))
         return;
     QTextStream ofs(&f);
+    ofs<<words.size()<<"\n";
     for (int i = 0; i < words.size(); i++) {
          ofs << convertFrom(words[i].word) << "\n" << dictionaryNo[i] << "\n";
     }
@@ -24,17 +25,18 @@ void History::loadFromFile() {
     if (!f.open(QIODevice::ReadOnly))
         return;
     QTextStream ifs(&f);
-    while (!f.atEnd()){
+    int n;
+    ifs>>n;
+    for (int i=0; i<n; i++){
             std::string temp;
             temp=convertTo(ifs.readLine());
+            qDebug()<<convertFrom(temp);
             WordAndDef wad;
             wad.word = temp;
             words.push_back(wad);
-            std::string temp2;
-            temp2=convertTo(ifs.readLine());
             int a;
-            std::stringstream ss;
-            ss << temp2; ss >> a;
+            ifs>>a;
+            qDebug()<<a;
             dictionaryNo.push_back(a);
     }
     f.close();
@@ -54,6 +56,7 @@ void Favorite::initDefinition() {
 void Favorite::saveToFile() {
     QFile f((qApp->applicationDirPath()+"/favorite.txt"));
     QTextStream ofs(&f);
+    ofs<<words.size()<<"\n";
     for (int i = 0; i < words.size(); i++) {
             ofs << convertFrom(words[i].word) << "\n" << dictionaryNo[i] << "\n";
      }
@@ -65,17 +68,16 @@ void Favorite::loadFromFile() {
     if (!f.open(QIODevice::ReadOnly))
         return;
      QTextStream ifs(&f);
-     while (!f.atEnd()){
+     int n;
+     ifs>>n;
+     for (int i=0; i<n; i++){
             std::string temp;
             temp=convertTo(ifs.readLine());
             WordAndDef wad;
             wad.word = temp;
             words.push_back(wad);
-            std::string temp2;
-            temp2=convertTo(ifs.readLine());
             int a;
-            std::stringstream ss;
-            ss << temp2; ss >> a;
+            ifs>>a;
             dictionaryNo.push_back(a);
     }
     f.close();

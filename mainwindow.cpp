@@ -342,7 +342,7 @@ void MainWindow::on_pushButton_4_clicked()
     if (!found) {
             WordAndDef wad;
             wad.word = selectedWord;
-            wad.definition = convertTo(ui->definition->selectedText());
+            wad.definition = convertTo(ui->definition->text());
             favorite.words.push_back(wad);
             favorite.dictionaryNo.push_back(currentSet); //them vao danh sach favorite va luu no thuoc tu dien nao
             favorite.saveToFile();
