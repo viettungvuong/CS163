@@ -37,17 +37,14 @@ void History::loadFromFile() {
             ss << temp2; ss >> a;
             dictionaryNo.push_back(a);
     }
-
-    words.pop_back();
     f.close();
     initDefinition();
+
 }
 void History::addToHistory(WordAndDef wad, int dictionaryNo) {
     words.push_back(wad);
     this->dictionaryNo.push_back(dictionaryNo); //luu la thuoc tu dien nao
     saveToFile();
-
-
 }
 void Favorite::initDefinition() {
     for (int i = 0; i < words.size(); i++) {
@@ -56,8 +53,6 @@ void Favorite::initDefinition() {
 } //ham de them def khi load
 void Favorite::saveToFile() {
     QFile f((qApp->applicationDirPath()+"/favorite.txt"));
-    if (!f.open(QIODevice::WriteOnly))
-        return;
     QTextStream ofs(&f);
     for (int i = 0; i < words.size(); i++) {
             ofs << convertFrom(words[i].word) << "\n" << dictionaryNo[i] << "\n";
@@ -83,8 +78,6 @@ void Favorite::loadFromFile() {
             ss << temp2; ss >> a;
             dictionaryNo.push_back(a);
     }
-
-    words.pop_back();
     f.close();
     initDefinition();
 }

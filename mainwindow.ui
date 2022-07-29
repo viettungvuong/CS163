@@ -27,7 +27,7 @@
      <enum>QTabWidget::South</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -586,6 +586,9 @@
       <property name="alignment">
        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
       </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_4">
@@ -631,9 +634,9 @@
      <widget class="QLabel" name="definition_3">
       <property name="geometry">
        <rect>
-        <x>270</x>
+        <x>310</x>
         <y>10</y>
-        <width>491</width>
+        <width>451</width>
         <height>321</height>
        </rect>
       </property>
@@ -648,6 +651,9 @@
       </property>
       <property name="alignment">
        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>
