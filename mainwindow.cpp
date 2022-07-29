@@ -327,3 +327,25 @@ void MainWindow::on_suggestingWords2_currentRowChanged(int currentRow)
     }
 }
 
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    bool found = false;
+    std::string selectedWord=convertTo(ui->searchBar->toPlainText());
+    for (int i = 0; i < favorite.words.size(); i++) {
+         if (favorite.words[i].word == selectedWord) {
+             found = true;
+             break;
+         }
+    }
+    if (!found) {
+            WordAndDef wad;
+            wad.word = selectedWord;
+            wad.definition = convertTo(ui->definition->selectedText());
+            favorite.words.push_back(wad);
+            favorite.dictionaryNo.push_back(currentSet); //them vao danh sach favorite va luu no thuoc tu dien nao
+            favorite.saveToFile();
+            v2ListView(favorite.words, ui->favoriteList);
+    }
+}
+
