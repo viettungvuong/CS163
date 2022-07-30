@@ -356,7 +356,7 @@ void MainWindow::on_pushButton_4_clicked()
 
 void MainWindow::on_pushButton_5_clicked()
 {
-    editWord ew=editWord(convertTo(ui->searchBar->toPlainText())); //mo cua so edit word
-    ew.show();
+    editWord* ew=new editWord(convertTo(ui->searchBar->toPlainText())); //mo cua so edit word
+    ew->show();
 }
 

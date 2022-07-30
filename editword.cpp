@@ -34,7 +34,7 @@ void editWord::on_pushButton_clicked()
     std::string changing = changingWord; //lay tu dang chon de chinh sua
     changeWord(ProgramData::currentTree, changing, ui);
     saveAllTree(ProgramData::listOfTree);
-    this->hide(); //an cua so lai
+    this->close(); //an cua so lai
 }
 
 
