@@ -24,6 +24,8 @@ void addNewWord::on_pushButton_clicked()
     std::string keyword=convertTo(ui->wordInput->toPlainText());
     std::string definition=convertTo(ui->definitionInput->toPlainText());
     keyword[0]=toupper(keyword[0]); //viet hoa chu dau
+    for (int i=1; i<keyword.length(); i++)
+        keyword[i]=tolower(keyword[i]); //dam bao dung format tu dien
     ProgramData::currentTree.addNewWordToDict(keyword,definition);
     saveAllTree(ProgramData::listOfTree);
     //ProgramData::listOfTree[currentSet].import_dictionary(currentSet);
