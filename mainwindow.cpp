@@ -325,6 +325,7 @@ void MainWindow::on_pushButton_8_clicked()
 void MainWindow::on_suggestingWords2_currentRowChanged(int currentRow)
 {
     if (v.size() > 0) {
+        ui->currentWord_2->setText(convertFrom(v[currentRow].word));
           ui->definition2->setText(convertFrom(v[currentRow].definition)); //xuat definition khi dc chon
           WordAndDef wad;
           wad.word = convertTo(ui->searchBar->toPlainText());

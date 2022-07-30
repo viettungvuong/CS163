@@ -27,7 +27,7 @@
      <enum>QTabWidget::South</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -196,9 +196,9 @@
       <property name="geometry">
        <rect>
         <x>300</x>
-        <y>50</y>
+        <y>110</y>
         <width>461</width>
-        <height>271</height>
+        <height>211</height>
        </rect>
       </property>
       <property name="font">
@@ -228,6 +228,28 @@
       </property>
       <property name="text">
        <string>Reset dictionary</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="currentWord">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>50</y>
+        <width>481</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>
@@ -283,9 +305,9 @@
       <property name="geometry">
        <rect>
         <x>340</x>
-        <y>60</y>
+        <y>160</y>
         <width>441</width>
-        <height>371</height>
+        <height>271</height>
        </rect>
       </property>
       <property name="text">
@@ -293,6 +315,28 @@
       </property>
       <property name="alignment">
        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="currentWord_2">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>60</y>
+        <width>451</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
