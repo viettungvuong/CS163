@@ -184,6 +184,7 @@ void MainWindow::on_suggestingWords_currentRowChanged(int currentRow)
             v2ListView(history.words, ui->historyList);
             ui->pushButton_4->setEnabled(true);
             ui->pushButton_5->setEnabled(true);
+            ui->suggestingWords->clear();
         }
         else
         {
@@ -347,8 +348,8 @@ void MainWindow::on_pushButton_4_clicked()
             wad.definition = convertTo(ui->definition->text());
             favorite.words.push_back(wad);
             favorite.dictionaryNo.push_back(currentSet); //them vao danh sach favorite va luu no thuoc tu dien nao
-            favorite.saveToFile();
             v2ListView(favorite.words, ui->favoriteList);
+            favorite.saveToFile();
     }
 }
 

@@ -56,10 +56,12 @@ void Favorite::initDefinition() {
 } //ham de them def khi load
 void Favorite::saveToFile() {
     QFile f((qApp->applicationDirPath()+"/favorite.txt"));
+    if (!f.open(QIODevice::WriteOnly))
+        return;
     QTextStream ofs(&f);
     for (int i = 0; i < words.size(); i++) {
-            ofs << convertFrom(words[i].word) << "\n" << dictionaryNo[i] << "\n";
-     }
+         ofs << convertFrom(words[i].word) << "\n" << dictionaryNo[i] << "\n";
+    }
 
     f.close();
 }
