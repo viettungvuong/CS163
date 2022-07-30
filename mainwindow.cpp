@@ -43,6 +43,8 @@ void MainWindow::on_pushButton_3_clicked()
                 return;
             }
 
+            //neu tu co trong tu dien
+            ui->currentWord->setText(ui->searchBar->toPlainText());
             std::string def = *find->definition;
             ui->definition->setText(convertFrom(def));
             ui->pushButton_4->setEnabled(true);
@@ -175,6 +177,7 @@ void MainWindow::on_suggestingWords_currentRowChanged(int currentRow)
 {
     if (currentRow!=-1) {
             int i = currentRow;
+            ui->currentWord->setText(convertFrom(suggesting[i].word));
             ui->definition->setText(convertFrom(suggesting[i].definition));
             ui->searchBar->setText(convertFrom(suggesting[i].word));
             WordAndDef wad;
