@@ -360,7 +360,7 @@ void MainWindow::on_pushButton_4_clicked()
 
 void MainWindow::on_pushButton_5_clicked()
 {
-    editWord* ew=new editWord(convertTo(ui->searchBar->toPlainText())); //mo cua so edit word
+    editWord* ew=new editWord(convertTo(ui->searchBar->toPlainText()),ui); //mo cua so edit word
     ew->show();
 }
 

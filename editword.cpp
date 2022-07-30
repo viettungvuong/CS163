@@ -9,10 +9,11 @@ void changeWord(TernarySearchTree tree, std::string changingWord, Ui::editWord* 
         main->definition->setText(ui->textEdit->toPlainText()); //cap nhat tai cho luon
 }
 
-editWord::editWord(const std::string& wordToChange, QWidget *parent) :
+editWord::editWord(const std::string& wordToChange, Ui::MainWindow *main, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::editWord)
 {
+    this->main=main;
     ui->setupUi(this);
     changingWord=wordToChange;
     ui->currentWord->setText(convertFrom(changingWord));
@@ -36,7 +37,7 @@ void editWord::on_textEdit_textChanged()
 void editWord::on_pushButton_clicked()
 {
     std::string changing = changingWord; //lay tu dang chon de chinh sua
-    changeWord(ProgramData::currentTree, changing, ui);
+    changeWord(ProgramData::currentTree, changing, ui, main);
     saveAllTree(ProgramData::listOfTree);
     this->close(); //an cua so lai
 }
