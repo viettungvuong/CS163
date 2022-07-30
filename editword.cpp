@@ -1,10 +1,12 @@
 #include "editword.h"
 #include "ui_editword.h"
 #include "functions.h"
+
 void changeWord(TernarySearchTree tree, std::string changingWord, Ui::editWord* ui) {
     TernaryTreeNode* find = tree.search4keyword(changingWord);
     updateWord(find, convertTo(ui->textEdit->toPlainText())); //la tim duoc cai tu dang can chuyen (changWord) sang ui->textEdit->Text
 }
+
 editWord::editWord(const std::string& wordToChange, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::editWord)

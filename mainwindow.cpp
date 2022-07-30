@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "editword.h"
 #include "functions.h"
 #include "main.h"
 #include <QFile>
@@ -349,5 +350,12 @@ void MainWindow::on_pushButton_4_clicked()
             favorite.saveToFile();
             v2ListView(favorite.words, ui->favoriteList);
     }
+}
+
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    editWord ew=editWord(convertTo(ui->searchBar->toPlainText())); //mo cua so edit word
+    ew.show();
 }
 

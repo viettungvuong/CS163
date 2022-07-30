@@ -15,6 +15,9 @@ public:
     explicit addNewWord(QWidget *parent = nullptr);
     ~addNewWord();
 
+private slots:
+    void on_buttonBox_accepted();
+
 private:
     Ui::addNewWord *ui;
 };

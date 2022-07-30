@@ -12,3 +12,9 @@ addNewWord::~addNewWord()
 {
     delete ui;
 }
+
+void addNewWord::on_buttonBox_accepted()
+{
+
+}
+
