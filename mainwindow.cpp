@@ -362,5 +362,10 @@ void MainWindow::on_pushButton_5_clicked()
 {
     editWord* ew=new editWord(convertTo(ui->searchBar->toPlainText()),ui); //mo cua so edit word
     ew->show();
+    favorite.initDefinition();
+    history.initDefinition();
+    v2ListView(favorite.words,ui->favoriteList);
+    v2ListView(history.words,ui->historyList);
+    //cap nhat lai trong cac list favorite va history de doi def luon
 }
 
