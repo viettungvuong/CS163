@@ -21,6 +21,8 @@ void addNewWord::on_pushButton_clicked()
     std::string keyword=convertTo(ui->wordInput->toPlainText());
     std::string definition=convertTo(ui->definitionInput->toPlainText());
     ProgramData::currentTree.addNewWordToDict(keyword,definition);
+    saveAllTree(ProgramData::listOfTree);
+    this->close();
 }
 
 

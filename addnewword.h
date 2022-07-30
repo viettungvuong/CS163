@@ -16,7 +16,10 @@ public:
     ~addNewWord();
 
 private slots:
-    void on_buttonBox_accepted();
+
+    void on_pushButton_clicked();
+
+    void on_wordInput_textChanged();
 
 private:
     Ui::addNewWord *ui;

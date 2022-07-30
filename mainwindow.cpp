@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "addnewword.h"
 #include "editword.h"
 #include "functions.h"
 #include "main.h"
@@ -367,5 +368,12 @@ void MainWindow::on_pushButton_5_clicked()
     v2ListView(favorite.words,ui->favoriteList);
     v2ListView(history.words,ui->historyList);
     //cap nhat lai trong cac list favorite va history de doi def luon
+}
+
+
+void MainWindow::on_pushButton_9_clicked()
+{
+    addNewWord aw=new addNewWord();
+    aw.show();
 }
 

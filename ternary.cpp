@@ -221,11 +221,6 @@ void TernarySearchTree::guessRandomDefinition(bool nonWord) {
     }
 }
 void TernarySearchTree::addNewWordToDict(std::string keyword, std::string definition) {
-    std::string keyword, definition;
-    std::cout << "Please enter the word you want to add: ";
-    std::getline(std::cin, keyword);
-    std::cout << "Please enter the definition of the word: ";
-    std::getline(std::cin, definition);
     this->add2Tree(keyword, definition, 0);
 }
 void updateWord(TernaryTreeNode*& tem,std::string newDefinition) {
