@@ -308,8 +308,6 @@ void TernarySearchTree::add2Tree(std::string keyword, std::string definition, bo
     }
     tem->definition = new std::string;
     *tem->definition = definition;
-    if (!importing)
-        std::cout << "Added successfully word " << keyword << "\n";
 }
 void TernarySearchTree::editKeyword(TernaryTreeNode*& tem, std::string newDefinition) {
     *tem->definition = newDefinition;
