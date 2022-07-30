@@ -59,20 +59,20 @@ void guessRandomDefinition(TernarySearchTree& tree, bool nonWord, Ui::MainWindow
     std::string show = tree.wordAndDefinition[chooseWord2].first;
     ui->guess2->setText(convertFrom(show));
     for (int i = 0; i < 4; i++) {
-        QRadioButton* selected;
+        QLabel* selected;
         switch (i) {
         case 0: {
-            selected = ui->radioButton_5;
+            selected = ui->answer1;
             break; }
         case 1: {
-            selected = ui->radioButton_6;
+            selected = ui->answer1_2;
             break; }
         case 2: {
-            selected = ui->radioButton_7;
+            selected = ui->answer1_3;
             break;
         }
         default: {
-            selected = ui->radioButton_8;
+            selected = ui->answer1_4;
             break;
         }
         }

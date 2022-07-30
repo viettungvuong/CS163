@@ -6,8 +6,9 @@ addNewWord::addNewWord(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::addNewWord)
 {
-    ui->pushButton->setEnabled(false);
+
     ui->setupUi(this);
+    ui->pushButton->setEnabled(false);
 }
 
 addNewWord::~addNewWord()

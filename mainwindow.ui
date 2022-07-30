@@ -27,7 +27,7 @@
      <enum>QTabWidget::South</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -397,8 +397,8 @@
         <rect>
          <x>30</x>
          <y>160</y>
-         <width>99</width>
-         <height>20</height>
+         <width>331</width>
+         <height>41</height>
         </rect>
        </property>
        <property name="text">
@@ -410,8 +410,8 @@
         <rect>
          <x>30</x>
          <y>200</y>
-         <width>99</width>
-         <height>20</height>
+         <width>321</width>
+         <height>41</height>
         </rect>
        </property>
        <property name="text">
@@ -423,8 +423,8 @@
         <rect>
          <x>30</x>
          <y>240</y>
-         <width>99</width>
-         <height>20</height>
+         <width>321</width>
+         <height>41</height>
         </rect>
        </property>
        <property name="text">
@@ -436,8 +436,8 @@
         <rect>
          <x>30</x>
          <y>280</y>
-         <width>99</width>
-         <height>20</height>
+         <width>321</width>
+         <height>41</height>
         </rect>
        </property>
        <property name="text">
@@ -456,25 +456,31 @@
        <property name="text">
         <string/>
        </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
       </widget>
       <widget class="QLabel" name="answer">
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>350</y>
+         <y>370</y>
          <width>331</width>
-         <height>91</height>
+         <height>71</height>
         </rect>
        </property>
        <property name="text">
         <string/>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_7">
        <property name="geometry">
         <rect>
          <x>120</x>
-         <y>310</y>
+         <y>330</y>
          <width>100</width>
          <height>32</height>
         </rect>
@@ -513,9 +519,9 @@
        <property name="geometry">
         <rect>
          <x>30</x>
-         <y>160</y>
-         <width>99</width>
-         <height>20</height>
+         <y>120</y>
+         <width>21</width>
+         <height>61</height>
         </rect>
        </property>
        <property name="text">
@@ -526,9 +532,9 @@
        <property name="geometry">
         <rect>
          <x>30</x>
-         <y>200</y>
-         <width>99</width>
-         <height>20</height>
+         <y>170</y>
+         <width>16</width>
+         <height>61</height>
         </rect>
        </property>
        <property name="text">
@@ -539,9 +545,9 @@
        <property name="geometry">
         <rect>
          <x>30</x>
-         <y>240</y>
-         <width>99</width>
-         <height>20</height>
+         <y>230</y>
+         <width>16</width>
+         <height>51</height>
         </rect>
        </property>
        <property name="text">
@@ -552,9 +558,9 @@
        <property name="geometry">
         <rect>
          <x>30</x>
-         <y>280</y>
-         <width>99</width>
-         <height>20</height>
+         <y>290</y>
+         <width>21</width>
+         <height>41</height>
         </rect>
        </property>
        <property name="text">
@@ -573,31 +579,137 @@
        <property name="text">
         <string/>
        </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
       </widget>
       <widget class="QLabel" name="answer2">
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>350</y>
+         <y>390</y>
          <width>331</width>
-         <height>91</height>
+         <height>51</height>
         </rect>
        </property>
        <property name="text">
         <string/>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_6">
        <property name="geometry">
         <rect>
          <x>130</x>
-         <y>310</y>
+         <y>350</y>
          <width>100</width>
          <height>32</height>
         </rect>
        </property>
        <property name="text">
         <string>Confirm</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="answer1">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>130</y>
+         <width>281</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="answer1_2">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>180</y>
+         <width>281</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="answer1_3">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>230</y>
+         <width>281</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="answer1_4">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>290</y>
+         <width>281</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
        </property>
       </widget>
      </widget>

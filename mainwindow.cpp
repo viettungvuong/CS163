@@ -230,6 +230,7 @@ void MainWindow::on_pushButton_clicked()
     ui->radioButton_3->setEnabled(true);
     ui->radioButton_4->setEnabled(true);
     guessRandomWord(ProgramData::listOfTree[2],false,ui);
+    ui->answer->setText("");
 }
 
 
@@ -241,12 +242,12 @@ void MainWindow::on_pushButton_2_clicked()
     ui->radioButton_7->setEnabled(true);
     ui->radioButton_8->setEnabled(true);
     guessRandomDefinition(ProgramData::listOfTree[2],false,ui);
+    ui->answer->setText("");
 }
 
 
 void MainWindow::on_pushButton_7_clicked()
 {
-    ui->answer->setAutoFillBackground(true);
     if (selected1 != -1 && selected1 == chooseWord1) //dung
     {
            QPalette palette = ui->answer->palette();
@@ -260,7 +261,7 @@ void MainWindow::on_pushButton_7_clicked()
           palette.setColor(ui->answer->backgroundRole(), Qt::red);
           palette.setColor(ui->answer->foregroundRole(), Qt::red);
           ui->answer->setPalette(palette);
-          ui->answer->setText(convertFrom("Wrong answer. The correct answer is " + ProgramData::currentTree.wordAndDefinition[chooseWord1].first));
+          ui->answer->setText(convertFrom("Wrong answer. The correct answer is " + ProgramData::listOfTree[2].wordAndDefinition[chooseWord1].first));
     }
     ui->pushButton_7->setEnabled(false);
     selected1 = -1;
@@ -269,7 +270,6 @@ void MainWindow::on_pushButton_7_clicked()
 
 void MainWindow::on_pushButton_6_clicked()
 {
-    ui->answer2->setAutoFillBackground(true);
     if (selected2 != -1 && selected2 == chooseWord2) //dung
     {
            QPalette palette = ui->answer2->palette();
@@ -283,7 +283,7 @@ void MainWindow::on_pushButton_6_clicked()
           palette.setColor(ui->answer2->backgroundRole(), Qt::red);
           palette.setColor(ui->answer2->foregroundRole(), Qt::red);
           ui->answer2->setPalette(palette);
-          ui->answer2->setText(convertFrom("Wrong answer. The correct answer is " + ProgramData::currentTree.wordAndDefinition[chooseWord2].second));
+          ui->answer2->setText(convertFrom("Wrong answer. The correct answer is " + ProgramData::listOfTree[2].wordAndDefinition[chooseWord2].second));
     }
     ui->pushButton_6->setEnabled(false);
     selected2 = -1;
