@@ -89,15 +89,25 @@ void saveTree(TernaryTreeNode* root, int index)
 
 void saveAllTree(TernarySearchTree* listOfTree)
 {
-    std::ofstream fA("\\Library\\slang.txt");
-    fA << "";
-    fA.close();
-    std::ofstream fB("\\Library\\emotional.txt");
-    fB << "";
-    fB.close();
-    std::ofstream fC("\\Library\\dictionary.txt");
-    fC << "";
-    fC.close();
+    QFile f;
+    f.setFileName(qApp->applicationDirPath()+"/Library/slang.txt");
+    QTextStream fA(&f);
+    if (!f.open(QIODevice::WriteOnly))
+        return;
+    fA<<"";
+    f.close();
+    f.setFileName(qApp->applicationDirPath()+"/Library/emotional.txt");
+    QTextStream fB(&f);
+    if (!f.open(QIODevice::WriteOnly))
+        return;
+    fB<<"";
+    f.close();
+    f.setFileName(qApp->applicationDirPath()+"/Library/dictionary.txt");
+    QTextStream fC(&f);
+    if (!f.open(QIODevice::WriteOnly))
+        return;
+    fC<<"";
+    f.close();
     for (int i = 0; i < NUMofSET; ++i)
     {
         saveTree(ProgramData::listOfTree[i].getRoot(), i);

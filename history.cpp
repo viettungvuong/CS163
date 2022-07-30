@@ -41,7 +41,8 @@ void History::loadFromFile() {
         i++;
    }
     f.close();
-    initDefinition();
+    if (i>0)
+      initDefinition();
 
 }
 void History::addToHistory(WordAndDef wad, int dictionaryNo) {
@@ -89,6 +90,7 @@ void Favorite::loadFromFile() {
          i++;
     }
     f.close();
-    initDefinition();
+    if (i>0)
+      initDefinition();
 }
 
