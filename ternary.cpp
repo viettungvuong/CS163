@@ -220,7 +220,7 @@ void TernarySearchTree::guessRandomDefinition(bool nonWord) {
         std::cout << "WASTED, the correct answer is " << wordAndDefinition[chooseWord].second;
     }
 }
-void TernarySearchTree::addNewWordToDict() {
+void TernarySearchTree::addNewWordToDict(std::string keyword, std::string definition) {
     std::string keyword, definition;
     std::cout << "Please enter the word you want to add: ";
     std::getline(std::cin, keyword);

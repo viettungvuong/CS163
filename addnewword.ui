@@ -32,7 +32,7 @@
     <string>New definition:</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit">
+  <widget class="QTextEdit" name="definitionInput">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -61,7 +61,7 @@
     <string>Current word:</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit_2">
+  <widget class="QTextEdit" name="wordInput">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -84,7 +84,26 @@
     </rect>
    </property>
    <property name="text">
-    <string>Edit</string>
+    <string>Add</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="status">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>90</y>
+     <width>351</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

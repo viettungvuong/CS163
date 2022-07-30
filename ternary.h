@@ -57,7 +57,7 @@ public:
     TernaryTreeNode* getRandomWord2(bool normal = true, int i = 0);
     void guessRandomWord(bool nonWord = false);
     void guessRandomDefinition(bool nonWord = false); //nonword la danh cho slang va emotional
-    void addNewWordToDict();
+    void addNewWordToDict(std::string keyword, std::string definition); //them tu moi vao tu dien
     void deleteKeword(std::string keyword);
     TernaryTreeNode* getRoot();
     void inorderTraversal();
