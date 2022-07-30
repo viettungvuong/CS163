@@ -373,7 +373,7 @@ void MainWindow::on_pushButton_5_clicked()
 
 void MainWindow::on_pushButton_9_clicked()
 {
-    addNewWord aw=new addNewWord();
-    aw.show();
+    addNewWord* aw=new addNewWord();
+    aw->show();
 }
 
