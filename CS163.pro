@@ -18,6 +18,7 @@ SOURCES += \
     ternary.cpp
 
 HEADERS += \
+    CustomTab.h \
     addnewword.h \
     editword.h \
     functions.h \

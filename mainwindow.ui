@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>832</width>
-    <height>642</height>
+    <width>835</width>
+    <height>664</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
       <x>0</x>
       <y>0</y>
       <width>831</width>
-      <height>541</height>
+      <height>531</height>
      </rect>
     </property>
     <property name="layoutDirection">
@@ -864,10 +864,10 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>550</y>
-      <width>411</width>
-      <height>21</height>
+      <x>200</x>
+      <y>540</y>
+      <width>431</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -883,6 +883,9 @@
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -890,7 +893,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>832</width>
+     <width>835</width>
      <height>37</height>
     </rect>
    </property>
