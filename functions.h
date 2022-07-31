@@ -26,3 +26,5 @@ std::vector<WordAndDef> suggestWords(std::string soFar);
 bool fileExists(const std::string& name);
 void load(Ui::MainWindow* ui);
 void wordOfTheDay(Ui::MainWindow* ui);
+
+void normalizeString(std::string& str);

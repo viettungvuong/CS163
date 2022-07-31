@@ -214,3 +214,10 @@ std::string convertTo(QString input){
 QString convertFrom(std::string input){
     return QString::fromStdString(input);
 }
+void normalizeString(std::string& str){
+    //tai vi format cua tu dien la chu cai dau viet hoa
+    //cac chu con lai viet thuong
+    str[0]=toupper(str[0]);
+    for (int i=1; i<str.length(); i++)
+        str[i]=tolower(str[i]);
+}
