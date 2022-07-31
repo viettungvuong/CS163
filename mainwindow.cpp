@@ -35,7 +35,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->favoriteList->setCurrentRow(0);
     ui->historyList->setCurrentRow(0);
 
-    ui->tabWidget->tabBar()->setStyle(new CustomTabStyle);
+    //ui->tabWidget->tabBar()->setStyle(new CustomTabStyle);
 }
 
 MainWindow::~MainWindow()

@@ -20,7 +20,7 @@
       <x>0</x>
       <y>0</y>
       <width>831</width>
-      <height>531</height>
+      <height>551</height>
      </rect>
     </property>
     <property name="layoutDirection">
@@ -33,7 +33,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -865,9 +865,9 @@
     <property name="geometry">
      <rect>
       <x>200</x>
-      <y>540</y>
+      <y>560</y>
       <width>431</width>
-      <height>41</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
@@ -894,7 +894,7 @@
      <x>0</x>
      <y>0</y>
      <width>835</width>
-     <height>37</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
