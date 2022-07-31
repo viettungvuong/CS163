@@ -2,6 +2,7 @@
 #include "addnewword.h"
 #include "editword.h"
 #include "functions.h"
+#include "CustomTab.h"
 #include "main.h"
 #include <QFile>
 #include <QMessageBox>
@@ -31,6 +32,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->favoriteList->setCurrentRow(0);
     ui->historyList->setCurrentRow(0);
+
+    //ui->tabWidget->tabBar()->setStyle(new CustomTabStyle);
 }
 
 MainWindow::~MainWindow()
