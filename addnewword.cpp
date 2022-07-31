@@ -11,6 +11,7 @@ addNewWord::addNewWord(QWidget *parent) :
     ui->setupUi(this);
     ui->pushButton->setEnabled(false);
     ui->definitionInput->setEnabled(false);
+    this->setFixedSize(QSize(400,300));
 }
 
 addNewWord::~addNewWord()

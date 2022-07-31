@@ -25,10 +25,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->radioButton_6->setEnabled(false);
     ui->radioButton_7->setEnabled(false);
     ui->radioButton_8->setEnabled(false);
+    this->setFixedSize(QSize(832,642));
 
     ui->clearAll->setEnabled(false);
     ui->removeHistory->setEnabled(false);
     ui->removeFavorite->setEnabled(false);
+    ui->removeBtn->setEnabled(false);
 
     ui->favoriteList->setCurrentRow(0);
     ui->historyList->setCurrentRow(0);

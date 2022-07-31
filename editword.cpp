@@ -18,6 +18,7 @@ editWord::editWord(const std::string& wordToChange, Ui::MainWindow *main, QWidge
     changingWord=wordToChange;
     ui->currentWord->setText(convertFrom(changingWord));
     ui->pushButton->setEnabled(false);
+        this->setFixedSize(QSize(400,300));
 }
 
 editWord::~editWord()
