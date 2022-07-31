@@ -398,8 +398,7 @@ void MainWindow::on_removeBtn_clicked()
     favorite.refresh(currentWord);
     history.refresh(currentWord);
     v2ListView(favorite.words,ui->favoriteList);
-    v2ListView(history.words,ui->history
-               List);
+    v2ListView(history.words,ui->historyList);
     saveAllTree(ProgramData::listOfTree);
 }
 
