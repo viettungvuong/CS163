@@ -41,7 +41,10 @@ void MainWindow::on_pushButton_3_clicked()
     TernaryTreeNode* find = ProgramData::currentTree.search4keyword(convertTo(ui->searchBar->toPlainText()));
             if (!find || !find->definition) {
                 ui->definition->setText("Not found");
-                return;
+                ui->pushButton_4->setEnabled(false);
+                ui->pushButton_5->setEnabled(false);
+                ui->removeBtn->setEnabled(false);
+                return; //kh co trg tu dien
             }
 
             //neu tu co trong tu dien
@@ -50,7 +53,7 @@ void MainWindow::on_pushButton_3_clicked()
             ui->definition->setText(convertFrom(def));
             ui->pushButton_4->setEnabled(true);
             ui->pushButton_5->setEnabled(true);
-
+            ui->removeBtn->setEnabled(true);
 
             ui->suggestingWords->clear();
             std::vector<WordAndDef> v = suggestWords(convertTo(ui->searchBar->toPlainText()));
@@ -188,12 +191,14 @@ void MainWindow::on_suggestingWords_currentRowChanged(int currentRow)
             v2ListView(history.words, ui->historyList);
             ui->pushButton_4->setEnabled(true);
             ui->pushButton_5->setEnabled(true);
+            ui->removeBtn->setEnabled(true);
             ui->suggestingWords->clear();
         }
         else
         {
             ui->pushButton_4->setEnabled(false);
             ui->pushButton_5->setEnabled(false);
+            ui->removeBtn->setEnabled(false);
         }
 }
 
@@ -375,5 +380,17 @@ void MainWindow::on_pushButton_9_clicked()
 {
     addNewWord* aw=new addNewWord();
     aw->show();
+}
+
+
+void MainWindow::on_removeBtn_clicked()
+{
+    ProgramData::currentTree.deleteKeword(convertTo(ui->currentWord->text())); //xoa tu hien tai
+    //them thong bao o day
+    ui->currentWord->setText("");
+    ui->definition->setText("");
+    //gio phai xoa trong favorite va history
+
+    saveAllTree(ProgramData::listOfTree);
 }
 
