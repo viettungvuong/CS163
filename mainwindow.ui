@@ -27,7 +27,7 @@
      <enum>QTabWidget::South</enum>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -204,7 +204,7 @@
       <property name="font">
        <font>
         <family>Arial</family>
-        <pointsize>14</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="text">
@@ -242,6 +242,7 @@
       <property name="font">
        <font>
         <family>Arial</family>
+        <pointsize>24</pointsize>
         <bold>true</bold>
        </font>
       </property>
@@ -773,7 +774,7 @@
       <property name="font">
        <font>
         <family>Arial</family>
-        <pointsize>14</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="text">
@@ -839,7 +840,7 @@
       <property name="font">
        <font>
         <family>Arial</family>
-        <pointsize>14</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="text">
