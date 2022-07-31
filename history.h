@@ -11,6 +11,7 @@ public:
     void loadFromFile();
     void addToHistory(WordAndDef wad, int dictionaryNo);
     void refresh(std::string keyword);
+    void reset();
 };
 
 
@@ -22,5 +23,6 @@ public:
     void saveToFile();
     void loadFromFile();
     void refresh(std::string keyword);
+    void reset();
 };
 

@@ -117,3 +117,11 @@ void Favorite::refresh(std::string keyword){
     saveToFile();
 }
 //de lam chuan hoa format tu trong tu dien luon
+void Favorite::reset(){
+    words.clear();
+    saveToFile();
+}
+void History::reset(){
+    words.clear();
+    saveToFile();
+}

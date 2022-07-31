@@ -27,6 +27,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->clearAll->setEnabled(false);
     ui->removeHistory->setEnabled(false);
+    ui->removeFavorite->setEnabled(false);
 
     ui->favoriteList->setCurrentRow(0);
     ui->historyList->setCurrentRow(0);
@@ -321,7 +322,15 @@ void MainWindow::on_comboBox_currentIndexChanged(int index) //chinh dataset
 void MainWindow::on_resetDictionary_clicked()
 {
     resetAllDictionary(ProgramData::listOfTree);
+    QMessageBox qmessage;
+    qmessage.setText("Reset all dictionaries successfully!");
+    qmessage.exec();
     saveAllTree(ProgramData::listOfTree);
+    history.reset();
+    favorite.reset();
+    ui->currentWord->setText("");
+    ui->definition->setText("");
+    load(ui); //reload lai tat ca
 }
 
 
