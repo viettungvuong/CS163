@@ -116,3 +116,4 @@ void Favorite::refresh(std::string keyword){
     }
     saveToFile();
 }
+//de lam chuan hoa format tu trong tu dien luon

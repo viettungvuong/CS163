@@ -398,6 +398,7 @@ void MainWindow::on_removeBtn_clicked()
     ui->definition->setText("");
 
     //gio phai xoa trong favorite va history
+    currentWord[0]=tolower(currentWord[0]); //chuan hoa format
     favorite.refresh(currentWord);
     history.refresh(currentWord);
     v2ListView(favorite.words,ui->favoriteList);
