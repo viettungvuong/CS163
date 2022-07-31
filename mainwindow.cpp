@@ -25,6 +25,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->radioButton_7->setEnabled(false);
     ui->radioButton_8->setEnabled(false);
 
+    ui->clearAll->setEnabled(false);
+    ui->removeHistory->setEnabled(false);
+
     ui->favoriteList->setCurrentRow(0);
     ui->historyList->setCurrentRow(0);
 }
