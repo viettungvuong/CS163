@@ -145,7 +145,10 @@ void MainWindow::on_removeFavorite_clicked()
             favorite.words.erase(favorite.words.begin() + i);
             favorite.dictionaryNo.erase(favorite.dictionaryNo.begin() + i);
             favorite.saveToFile();
-            v2ListView(favorite.words, ui->favoriteList);
+            if (favorite.words.size()>0)
+                ui->favoriteList->setCurrentRow(0);
+            else
+                ui->favoriteList->setCurrentRow(-1);
         }
 }
 
@@ -160,24 +163,26 @@ void MainWindow::on_removeHistory_clicked()
             history.words.erase(history.words.begin() + i);
             history.dictionaryNo.erase(history.dictionaryNo.begin() + i);
             history.saveToFile();
-            v2ListView(favorite.words, ui->historyList);
+            if (history.words.size()>0)
+                ui->historyList->setCurrentRow(0);
+            else
+                ui->historyList->setCurrentRow(-1);
         }
 }
 
 
 void MainWindow::on_historyList_currentRowChanged(int currentRow)
 {
-    if (history.words.size() > 0) {
-            ui->definition_3->setText(convertFrom(history.words[currentRow].definition)); //xuat definition khi dc chon
-        }
         if (currentRow != -1) {
             ui->clearAll->setEnabled(true);
             ui->removeHistory->setEnabled(true);
+            ui->definition_3->setText(convertFrom(history.words[currentRow].definition));
         }
         else
         {
             ui->clearAll->setEnabled(false);
             ui->removeHistory->setEnabled(false);
+            ui->definition_3->setText("");
         }
 }
 
@@ -217,7 +222,9 @@ void MainWindow::on_favoriteList_currentRowChanged(int currentRow)
     else
     {
         ui->removeFavorite->setEnabled(false);
+        ui->definition_2->setText("");
     }
+
 }
 
 
@@ -229,6 +236,7 @@ void MainWindow::on_clearAll_clicked()
         history.saveToFile();
         v2ListView(history.words, ui->historyList);
         ui->definition_3->setText("");
+        ui->historyList->setCurrentRow(-1);
 }
 
 
