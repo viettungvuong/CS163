@@ -389,6 +389,9 @@ void MainWindow::on_pushButton_9_clicked()
 void MainWindow::on_removeBtn_clicked()
 {
     std::string currentWord=convertTo(ui->currentWord->text());
+    currentWord[0]=toupper(currentWord[0]);
+    for (int i=1; i<currentWord.length(); i++)
+        currentWord[i]=tolower(currentWord[i]); //chinh cho dung format
     ProgramData::currentTree.deleteKeword(currentWord); //xoa tu hien tai
     //them thong bao o day
     ui->currentWord->setText("");
