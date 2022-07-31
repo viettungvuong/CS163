@@ -23,15 +23,21 @@
       <height>531</height>
      </rect>
     </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
     <property name="tabPosition">
      <enum>QTabWidget::South</enum>
     </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
-      <string>Search</string>
+      <string>Search 🔍</string>
      </attribute>
      <widget class="QLabel" name="label">
       <property name="geometry">
@@ -296,7 +302,7 @@
     </widget>
     <widget class="QWidget" name="tab_5">
      <attribute name="title">
-      <string>Search by definition</string>
+      <string>Search by definition 🔍</string>
      </attribute>
      <widget class="QPushButton" name="pushButton_8">
       <property name="geometry">
@@ -386,7 +392,7 @@
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
-      <string>Game</string>
+      <string>Game 🎮</string>
      </attribute>
      <widget class="QGroupBox" name="groupBox">
       <property name="geometry">
@@ -737,7 +743,7 @@
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
-      <string>Favorites</string>
+      <string>Favorites 🤩</string>
      </attribute>
      <widget class="QListWidget" name="favoriteList">
       <property name="geometry">
@@ -790,7 +796,7 @@
     </widget>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
-      <string>History</string>
+      <string>History 🕰️</string>
      </attribute>
      <widget class="QPushButton" name="removeHistory">
       <property name="geometry">
