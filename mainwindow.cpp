@@ -4,6 +4,7 @@
 #include "functions.h"
 #include "main.h"
 #include <QFile>
+#include <QMessageBox>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -348,8 +349,11 @@ void MainWindow::on_pushButton_4_clicked()
     std::string selectedWord=convertTo(ui->searchBar->toPlainText());
     for (int i = 0; i < favorite.words.size(); i++) {
          if (favorite.words[i].word == selectedWord) {
-             found = true;
-             break;
+             found = true; //tu da co trong favorite
+             QMessageBox qmessage;
+             qmessage.setText("Word "+ui->searchBar->toPlainText()+" is already in favorite");
+             qmessage.exec(); //hien thong bao
+             return;
          }
     }
     if (!found) {
@@ -382,15 +386,20 @@ void MainWindow::on_pushButton_9_clicked()
     aw->show();
 }
 
-
 void MainWindow::on_removeBtn_clicked()
 {
-    ProgramData::currentTree.deleteKeword(convertTo(ui->currentWord->text())); //xoa tu hien tai
+    std::string currentWord=convertTo(ui->currentWord->text());
+    ProgramData::currentTree.deleteKeword(currentWord); //xoa tu hien tai
     //them thong bao o day
     ui->currentWord->setText("");
     ui->definition->setText("");
-    //gio phai xoa trong favorite va history
 
+    //gio phai xoa trong favorite va history
+    favorite.refresh(currentWord);
+    history.refresh(currentWord);
+    v2ListView(favorite.words,ui->favoriteList);
+    v2ListView(history.words,ui->history
+               List);
     saveAllTree(ProgramData::listOfTree);
 }
 

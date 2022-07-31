@@ -3,6 +3,7 @@
 #include <fstream>
 #include <sstream>
 #include <QFile>
+#include <queue>
 void History::initDefinition() {
     for (int i = 0; i < words.size(); i++) {
         words[i].definition = *ProgramData::listOfTree[dictionaryNo[i]].search4keyword(words[i].word)->definition;
@@ -93,4 +94,25 @@ void Favorite::loadFromFile() {
     if (i>0)
       initDefinition();
 }
-
+void History::refresh(std::string keyword){
+    std::queue<int> deletePos;
+    for (int i=0; i<words.size(); i++){
+        if (words[i].word==keyword){
+            deletePos.push(i); //tim tat ca vi tri co tu nay
+        }
+    }
+    while (!deletePos.empty()){
+        words.erase(words.begin() + deletePos.front());
+        deletePos.pop();
+    }
+    saveToFile();
+}
+void Favorite::refresh(std::string keyword){
+    for (int i=0; i<words.size(); i++){
+        if (words[i].word==keyword){
+            words.erase(words.begin() + i);
+            break; //do favorite chi chua toi da 1 tu (kh trung nhau)
+        }
+    }
+    saveToFile();
+}
