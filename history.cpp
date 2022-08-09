@@ -108,11 +108,15 @@ void History::refresh(std::string keyword){
     saveToFile();
 }
 void Favorite::refresh(std::string keyword){
+    std::queue<int> deletePos;
     for (int i=0; i<words.size(); i++){
         if (words[i].word==keyword){
-            words.erase(words.begin() + i);
-            break; //do favorite chi chua toi da 1 tu (kh trung nhau)
+            deletePos.push(i); //tim tat ca vi tri co tu nay
         }
+    }
+    while (!deletePos.empty()){
+        words.erase(words.begin() + deletePos.front());
+        deletePos.pop();
     }
     saveToFile();
 }
