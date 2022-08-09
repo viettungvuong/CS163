@@ -6,7 +6,7 @@
 #include <sys/stat.h>
 #include <QFile>
 #include <QFileInfo>
-TernarySearchTree ProgramData::listOfTree[3];
+TernarySearchTree ProgramData::listOfTree[4];
 TernarySearchTree ProgramData::currentTree = ProgramData::listOfTree[2]; //mac dinh
 
 //0 la slang
@@ -64,6 +64,9 @@ void helper_saveTree(TernaryTreeNode* root, std::string str, int index)
         case 2://dictionary
             f.setFileName(qApp->applicationDirPath()+"/Library/dictionary.txt");
             break;
+        case 3:
+            f.setFileName(qApp->applicationDirPath()+"/DefaultLibrary/vn.txt");
+            break;
         default:
             break;
         }
@@ -107,6 +110,12 @@ void saveAllTree(TernarySearchTree* listOfTree)
     if (!f.open(QIODevice::WriteOnly))
         return;
     fC<<"";
+    f.close();
+    f.setFileName(qApp->applicationDirPath()+"/Library/vn.txt");
+    QTextStream fD(&f);
+    if (!f.open(QIODevice::WriteOnly))
+        return;
+    fD<<"";
     f.close();
     for (int i = 0; i < NUMofSET; ++i)
     {

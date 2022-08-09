@@ -8,7 +8,7 @@
 #include <chrono>
 #include <random>
 
-#define NUMofSET 3
+#define NUMofSET 4
 
 struct WordAndDef {
     std::string word;

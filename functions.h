@@ -8,7 +8,7 @@
 
 class ProgramData {
 public :static TernarySearchTree currentTree;
-       static TernarySearchTree listOfTree[3];
+       static TernarySearchTree listOfTree[4];
 };
 void deletetree(TernaryTreeNode* root);
 

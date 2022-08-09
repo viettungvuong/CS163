@@ -1,6 +1,7 @@
 #include "editword.h"
 #include "ui_editword.h"
 #include "functions.h"
+#include "main.h"
 
 void changeWord(TernarySearchTree tree, std::string changingWord, Ui::editWord* ui, Ui::MainWindow* main) {
     TernaryTreeNode* find = tree.search4keyword(changingWord);
@@ -40,6 +41,8 @@ void editWord::on_pushButton_clicked()
     std::string changing = changingWord; //lay tu dang chon de chinh sua
     changeWord(ProgramData::currentTree, changing, ui, main);
     saveAllTree(ProgramData::listOfTree);
+    favorite.initDefinition();
+    history.initDefinition();
     this->close(); //an cua so lai
 }
 

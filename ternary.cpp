@@ -391,6 +391,9 @@ void TernarySearchTree::import_dictionary(int index, bool forReset)
         case 2:
             f.setFileName(qApp->applicationDirPath()+"/DefaultLibrary/dictionary.txt");
             break;
+        case 3:
+            f.setFileName(qApp->applicationDirPath()+"/DefaultLibrary/vn.txt");
+            break;
         }
     }
     else
@@ -405,6 +408,9 @@ void TernarySearchTree::import_dictionary(int index, bool forReset)
             break;
         case 2:
             f.setFileName(qApp->applicationDirPath()+"/Library/dictionary.txt");
+            break;
+        case 3:
+            f.setFileName(qApp->applicationDirPath()+"/DefaultLibrary/vn.txt");
             break;
         }
     }
