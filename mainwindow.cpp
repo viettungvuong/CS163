@@ -252,6 +252,18 @@ void MainWindow::on_pushButton_clicked()
     ui->radioButton_2->setEnabled(true);
     ui->radioButton_3->setEnabled(true);
     ui->radioButton_4->setEnabled(true);
+    ui->radioButton->setChecked(false);
+    ui->radioButton->setAutoExclusive(true);
+    ui->radioButton_2->setAutoExclusive(false);
+    ui->radioButton_2->setChecked(false);
+    ui->radioButton_2->setAutoExclusive(true);
+    ui->radioButton_3->setAutoExclusive(false);
+    ui->radioButton_3->setChecked(false);
+    ui->radioButton_3->setAutoExclusive(true);
+    ui->radioButton_4->setAutoExclusive(false);
+    ui->radioButton_4->setChecked(false);
+    ui->radioButton_4->setAutoExclusive(true);
+
     guessRandomWord(ProgramData::listOfTree[2],false,ui);
     ui->answer->setText("");
 }
@@ -264,6 +276,18 @@ void MainWindow::on_pushButton_2_clicked()
     ui->radioButton_6->setEnabled(true);
     ui->radioButton_7->setEnabled(true);
     ui->radioButton_8->setEnabled(true);
+    ui->radioButton_5->setAutoExclusive(false);
+    ui->radioButton_5->setChecked(false);
+    ui->radioButton_5->setAutoExclusive(true);
+    ui->radioButton_6->setAutoExclusive(false);
+    ui->radioButton_6->setChecked(false);
+    ui->radioButton_6->setAutoExclusive(true);
+    ui->radioButton_7->setAutoExclusive(false);
+    ui->radioButton_7->setChecked(false);
+    ui->radioButton_7->setAutoExclusive(true);
+    ui->radioButton_8->setAutoExclusive(false);
+    ui->radioButton_8->setChecked(false);
+    ui->radioButton_8->setAutoExclusive(true);
     guessRandomDefinition(ProgramData::listOfTree[2],false,ui);
     ui->answer->setText("");
 }
@@ -288,6 +312,23 @@ void MainWindow::on_pushButton_7_clicked()
     }
     ui->pushButton_7->setEnabled(false);
     selected1 = -1;
+    ui->radioButton->setEnabled(false);
+    ui->radioButton_2->setEnabled(false);
+    ui->radioButton_3->setEnabled(false);
+    ui->radioButton_4->setEnabled(false);
+    ui->radioButton->setAutoExclusive(false);
+    ui->radioButton->setChecked(false);
+    ui->radioButton->setAutoExclusive(true);
+    ui->radioButton_2->setAutoExclusive(false);
+    ui->radioButton_2->setChecked(false);
+    ui->radioButton_2->setAutoExclusive(true);
+    ui->radioButton_3->setAutoExclusive(false);
+    ui->radioButton_3->setChecked(false);
+    ui->radioButton_3->setAutoExclusive(true);
+    ui->radioButton_4->setAutoExclusive(false);
+    ui->radioButton_4->setChecked(false);
+    ui->radioButton_4->setAutoExclusive(true);
+
 }
 
 
@@ -310,6 +351,22 @@ void MainWindow::on_pushButton_6_clicked()
     }
     ui->pushButton_6->setEnabled(false);
     selected2 = -1;
+    ui->radioButton_5->setEnabled(false);
+    ui->radioButton_6->setEnabled(false);
+    ui->radioButton_7->setEnabled(false);
+    ui->radioButton_8->setEnabled(false);
+    ui->radioButton_5->setAutoExclusive(false);
+    ui->radioButton_5->setChecked(false);
+    ui->radioButton_5->setAutoExclusive(true);
+    ui->radioButton_6->setAutoExclusive(false);
+    ui->radioButton_6->setChecked(false);
+    ui->radioButton_6->setAutoExclusive(true);
+    ui->radioButton_7->setAutoExclusive(false);
+    ui->radioButton_7->setChecked(false);
+    ui->radioButton_7->setAutoExclusive(true);
+    ui->radioButton_8->setAutoExclusive(false);
+    ui->radioButton_8->setChecked(false);
+    ui->radioButton_8->setAutoExclusive(true);
 }
 
 
