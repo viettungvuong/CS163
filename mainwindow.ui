@@ -216,7 +216,7 @@
       <property name="font">
        <font>
         <family>Arial</family>
-        <pointsize>14</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
       <property name="text">
