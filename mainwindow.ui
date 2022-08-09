@@ -39,7 +39,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -786,7 +786,7 @@
       <property name="font">
        <font>
         <family>Arial</family>
-        <pointsize>16</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
       <property name="text">
@@ -852,7 +852,7 @@
       <property name="font">
        <font>
         <family>Arial</family>
-        <pointsize>16</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
       <property name="text">
